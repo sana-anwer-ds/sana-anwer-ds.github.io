@@ -1,20 +1,90 @@
-// Placeholder content. Replace every bracketed or 'Placeholder' item with real, verified material.
-export const client = [
-      { kind: 'Client work · health', title: 'Forecasting hospital bed demand', summary: 'How many beds will a ward need next winter? A seasonal model with an honest interval cut forecast error from 21% to 9% on synthetic data.', tools: ['Python', 'Prophet', 'SQL'], action: 'Case Study' },
-      { kind: 'Client work · policy', title: 'Did a housing support rule reduce evictions?', summary: 'Did the new rule change eviction filings? A comparison-group study found an 11% fall with an interval from 4% to 17% on synthetic data.', tools: ['R', 'Causal methods', 'SQL'], action: 'Case Study' },
-      { kind: 'Client work · justice', title: 'Checking a case triage score for bias', summary: 'Does the score treat groups differently? An audit found error rates 6 points apart, and reweighting closed the gap to 1 point on synthetic data.', tools: ['Python', 'Fairness audit'], action: 'Case Study' },
-      { kind: 'Client work · access', title: 'Mapping gaps in access to care', summary: 'Which neighbourhoods are furthest from services? A spatial analysis found 4 of 30 areas hold 38% of unmet need in the synthetic sample.', tools: ['Python', 'GeoPandas', 'QGIS'], action: 'Case Study' }
-    ];
-export const course = [
-      { kind: 'Coursework · health', title: 'Predicting hospital readmission risk', summary: 'Which early signals predict a patient returning within 30 days? A regularised model reached an AUC of 0.78 on a public synthetic dataset.', tools: ['Python', 'scikit-learn'], action: 'Write-up (PDF)' },
-      { kind: 'Research · environment', title: 'Does heat change emergency visits?', summary: 'How much do hot days move emergency visits? A regression with weather and calendar terms found visits rising about 7% per 5 degrees on public sample data.', tools: ['R', 'GAM', 'ggplot2'], action: 'Write-up (PDF)' },
-      { kind: 'Coursework · law', title: 'Finding themes in public comments on a law', summary: 'What do people raise most? Topic modelling on 5,000 synthetic comments found six stable themes, and cost of compliance was the largest at 31%.', tools: ['Python', 'spaCy', 'LDA'], action: 'Write-up (PDF)' },
-      { kind: 'Research · inference', title: 'Estimating a rate from small samples', summary: 'How sure can we be about a rate seen in only 40 cases? A Bayesian model gave a usable interval where the plain average misled, on simulated data.', tools: ['Python', 'PyMC'], action: 'Write-up (PDF)' }
-    ];
-export const entries = [
-      { dates: '2024 to Present', org: '[Independent practice]', role: 'Data Scientist', cats: ['Analytics', 'Forecasting'], b1: 'Cut a synthetic bed demand forecast error from 21% to 9%, and reported the interval, not just the line.', b2: 'Published a bias checklist and method notes with every analysis.', tags: ['Forecasting', 'Analytics', 'Python'] },
-      { dates: '2022 to 2024', org: '[Organization A, public health]', role: 'Data Analyst', cats: ['Analytics'], b1: 'Found a reporting gap that hid a rise in missed visits in 3 areas. Placeholder.', b2: 'Replaced 12 manual reports with one reviewed dashboard. Placeholder.', tags: ['Analytics', 'SQL', 'Policy'] },
-      { dates: '2020 to 2022', org: '[Organization B, research institute]', role: 'Research Assistant, Forecasting', cats: ['Forecasting', 'Analytics'], b1: 'Raised 4 week forecast coverage from 70% to 90% of observed values. Placeholder.', b2: 'Built a backtesting harness the team reused for outbreak forecasts. Placeholder.', tags: ['Forecasting', 'R', 'Backtesting'] },
-      { dates: '2018 to 2020', org: '[University name]', role: 'MSc Statistics (placeholder)', cats: ['Education'], b1: 'Graduated with distinction. Thesis on small-sample rate estimates. Placeholder.', b2: 'Teaching assistant for an introductory inference course. Placeholder.', tags: ['Education', 'Bayesian'] },
-      { dates: '2014 to 2018', org: '[University name]', role: 'BSc Mathematics (placeholder)', cats: ['Education'], b1: 'Finished top of the cohort in statistics modules. Placeholder.', b2: 'Led a student data society of 40 members. Placeholder.', tags: ['Education', 'Statistics'] }
-    ];
+export type Entry = {
+  dates: string;
+  org: string;
+  role: string;
+  cats: string[];
+  bullets: string[];
+  tags: string[];
+  logos: string[];
+};
+
+export const entries: Entry[] = [
+  {
+    dates: 'May to Sep 2026',
+    org: 'Anthropic',
+    role: 'Certificates: AI agent skills and Claude Code',
+    cats: ['AI', 'Education'],
+    bullets: ['Completed Introduction to agent skills and Claude Code 101 (May 2026), then Claude Code in Action (Sep 2026).'],
+    tags: ['AI', 'Education'],
+    logos: ['/logos/anthropic.png'],
+  },
+  {
+    dates: 'Aug 2025 to Present',
+    org: 'Georgia Institute of Technology',
+    role: 'MS Analytics',
+    cats: ['Education', 'Analytics'],
+    bullets: ['Completing a Master of Science in Analytics alongside full-time work.'],
+    tags: ['Education', 'Analytics'],
+    logos: ['/logos/gt.png'],
+  },
+  {
+    dates: 'Jul 2025 to Present',
+    org: 'Tempo Software',
+    role: 'Lead Go-To-Market Analyst',
+    cats: ['GTM', 'Analytics'],
+    bullets: ['Designed and delivered go-to-market analytics to evaluate product performance, optimize adoption strategies and inform executive decisions.'],
+    tags: ['GTM', 'Analytics', 'SaaS'],
+    logos: ['/logos/tempo.png'],
+  },
+  {
+    dates: 'Jul 2022 to Sep 2025',
+    org: 'Lever',
+    role: 'Talent Analytics Consultant',
+    cats: ['Analytics'],
+    bullets: [
+      'Designed, built and automated key metrics with Tableau, Looker and other BI tools.',
+      'Ran cross-functional analysis and technical discovery alongside non-technical teams.',
+    ],
+    tags: ['Analytics', 'SQL', 'Tableau', 'Looker'],
+    logos: ['/logos/lever.png'],
+  },
+  {
+    dates: 'Apr 2015 to Jul 2022',
+    org: 'TD',
+    role: 'Business Data Analyst',
+    cats: ['Analytics'],
+    bullets: [
+      'Built metrics and dashboards for reporting and oversight of department projects in testing and launch, keeping the data accurate.',
+      'Grew into data work over seven years, from client service through fraud and AML investigation roles.',
+    ],
+    tags: ['Analytics', 'Python', 'Dashboards'],
+    logos: ['/logos/td.png'],
+  },
+  {
+    dates: '2019 to 2020',
+    org: 'Toronto Metropolitan University, Chang School',
+    role: 'Certificate in Data Analytics, Big Data and Predictive Analytics',
+    cats: ['Education', 'Analytics'],
+    bullets: ['Studied analytics, big data and predictive analytics while working.'],
+    tags: ['Education', 'Analytics'],
+    logos: ['/logos/tmu.png'],
+  },
+  {
+    dates: '2016 to 2017',
+    org: 'The Hospital for Sick Children and CAMH',
+    role: 'Research Assistant',
+    cats: ['Analytics'],
+    bullets: ['Supported health research as a research assistant at SickKids (Jan to Nov 2016) and CAMH (Aug 2016 to Mar 2017).'],
+    tags: ['Health research'],
+    logos: ['/logos/sickkids.png', '/logos/camh.png'],
+  },
+  {
+    dates: '2011 to 2015',
+    org: 'York University',
+    role: 'BA Honours, Psychology/Business',
+    cats: ['Education'],
+    bullets: ["Made the Dean's Honour List."],
+    tags: ['Education', 'Psychology', 'Business'],
+    logos: ['/logos/york.png'],
+  },
+];

@@ -10,9 +10,7 @@ npm run build
 ```
 
 ## Content
-All copy is placeholder. Edit `src/data/content.ts` (projects, timeline) and `src/pages/index.astro` (everything else).
-Replace every bracketed or "Placeholder" item with real material, and keep the "synthetic" labels on any example data.
-Links are `#` stubs: LinkedIn, GitHub, email, booking, and case study pages still need real targets.
+Copy lives in `src/pages/index.astro`; the timeline lives in `src/data/content.ts`.
 
 ## Deploy
 Pushes to `main` build and publish through GitHub Pages (`.github/workflows/deploy.yml`).
